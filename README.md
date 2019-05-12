@@ -11,9 +11,9 @@ Now that we have the build container, let’s run it. The –rm parameter instru
 ```curl -O -L https://github.com/vyos/vyos-build/archive/crux.zip
 yum install unzip
 unzip crux.zip
-cd vyos-build-crux```
+cd vyos-build-crux
 
-```docker run --rm -it --privileged -v $(pwd):/vyos -w /vyos milekz/vyos-build-crux bash```
+docker run --rm -it --privileged -v $(pwd):/vyos -w /vyos milekz/vyos-build-crux bash```
 
 # Configure the Build
 
