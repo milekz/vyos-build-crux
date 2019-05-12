@@ -8,11 +8,10 @@ I used this container to successfully make 1.2.0 and 1.2.1 ISOs that are now wor
 
 Now that we have the build container, let’s run it. The –rm parameter instructs Docker to remove the container when we exit. The -it parameter instructs Docker to run the container interactively. The –privileged parameter instructs Docker to run the container with (almost) all the capabilities of the host machine. The -v $(pwd):/vyos parameter instructs Docker to mount the current working directory on the host as /vyos within the container. The -w /vyos parameter instructs Docker to set /vyos as the current working directory within the container. The vyos-builder parameter just tells Docker to run the container image tagged with that value. And finally, the bash parameter instructs Docker to execute the bash command so you’ll have a shell to work with.
 
-```curl -O -L https://github.com/vyos/vyos-build/archive/crux.zip
+```curl -O -L https://github.com/vyos/vyos-build/archive/crux.zip``` ```
 yum install unzip
 unzip crux.zip
 cd vyos-build-crux
-
 docker run --rm -it --privileged -v $(pwd):/vyos -w /vyos milekz/vyos-build-crux bash```
 
 # Configure the Build
