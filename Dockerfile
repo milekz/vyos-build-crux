@@ -16,7 +16,7 @@
 # Must be run with --privileged flag, recommended to run the container with a
 # volume mapped in order to easy export images
 
-FROM debian:jessie
+FROM debian:buster
 LABEL authors="VyOS Maintainers <maintainers@vyos.io>"
 
 ENV DEBIAN_FRONTEND noninteractive
